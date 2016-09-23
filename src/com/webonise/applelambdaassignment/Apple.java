@@ -5,7 +5,7 @@ public class Apple {
     private final int weight;
     private final String color;
 
-    Apple(int id, int weight, String color) {
+    Apple(final int id, final int weight, final String color) {
         this.id = id;
         this.weight = weight;
         this.color = color;

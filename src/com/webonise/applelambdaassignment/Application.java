@@ -7,14 +7,14 @@ import java.util.logging.Logger;
 
 public class Application {
     private static final int CATEGORY_WEIGHT = 250;
-    List<Apple> appleList;
+    private final List<Apple> appleList;
     static final Logger logger = Logger.getLogger(Application.class.getName());
 
     Application() {
         appleList = new ArrayList<>();
     }
 
-    void CalculateResult() {
+    void calculateResult() {
         addApplestoList();
 
         IApple printAppleWeight = (apple) -> Integer.toString(apple.getWeight());
@@ -27,7 +27,7 @@ public class Application {
 
     private void prettyPrintApples(List<Apple> apples, IApple applePrinter) {
         for (Apple apple : apples) {
-            logger.log(Level.INFO, "com.webonise.applelambdaassignment.Apple " + apple.getId() + " : " + applePrinter.appleOperation(apple));
+            logger.log(Level.INFO, "Apple " + apple.getId() + " : " + applePrinter.appleOperation(apple));
         }
     }
 
